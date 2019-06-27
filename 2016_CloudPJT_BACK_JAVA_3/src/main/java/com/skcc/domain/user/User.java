@@ -9,26 +9,35 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name="users")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@ApiModel(description = "공연장 정보에 대한 정보입니다.")
 public class User {
 	
+	@ApiModelProperty(notes = "회원 ID입니다.")
 	@Id
 	private String user_id;
 	
+	@ApiModelProperty(notes = "회원 PW입니다.")
 	@Column (nullable = true)
 	private String user_password;
 	
+	@ApiModelProperty(notes = "회원 명 입니다.")
 	private String user_name;
 	
+	@ApiModelProperty(notes = "회원의 휴대폰 정보입니다.")
 	private String phone_num;
 	
+	@ApiModelProperty(notes = "해당 정보가 등록 된 시간입니다.")
 	private Date reg_dt;
 	
+	@ApiModelProperty(notes = "해당 정보가 수정 된 시간입니다.")
 	private Date upd_dt;
 
 	public String getUser_id() {

@@ -10,26 +10,35 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name="concerts")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+@ApiModel(description = "공연장 정보에 대한 정보입니다.")
 public class Concert {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@ApiModelProperty(notes = "공연장 ID입니다.")
 	private int concert_id;
 	
+	@ApiModelProperty(notes = "공연장 명 입니다.")
 	private String concert_name;
 	
+	@ApiModelProperty(notes = "장소에 대한 정보입니다.")
 	private String place;
 	
+	@ApiModelProperty(notes = "시간당 대여 금액입니다.")
 	private int price;
 	
+	@ApiModelProperty(notes = "해당 정보가 등록 된 시간입니다.")
 	private Date reg_dt;
 	
+	@ApiModelProperty(notes = "해당 정보가 수정 된 시간입니다.")
 	private Date upd_dt;
 
 	public int getConcert_id() {

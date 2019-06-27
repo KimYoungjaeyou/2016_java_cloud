@@ -28,8 +28,8 @@ public class SwaggerConfig {
 	
 	public ApiInfo getApiInfo() {
 		return new ApiInfoBuilder()
-				.title("게시판~~~~~~~~~~~")
-				.description("만세~~~~~~~~~~~~~~~~~~~~~~~")
+				.title("2016_CloudPJT_BACKEND_JAVA_REST_API")
+				.description("예약 및 결제에 대한 REST API")
 				.version("0.1")
 				.build();
 	} 
