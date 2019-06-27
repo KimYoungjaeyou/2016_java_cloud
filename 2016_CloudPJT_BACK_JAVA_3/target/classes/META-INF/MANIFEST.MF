@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: 2016_CloudPJT_BACK_JAVA_1
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Administrator
+Implementation-Vendor-Id: com.skcc
+Build-Jdk: 1.8.0_201
+Implementation-URL: https://projects.spring.io/spring-boot/2016_CloudP
+ JT_BACK_JAVA_1/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
